@@ -12,9 +12,8 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "build:dev": "node scripts/build.mjs -w",
-    "health": "yarn build; k6 run ./dist/health_test.js",
-    "list": "find ./dist | grep '.*.js'",
+    "watch": "node scripts/build.mjs -w",
+    "list": "find ./dist | grep '.*.js$'",
     "clean": "rm -rf ./dist/*"
   }
 }

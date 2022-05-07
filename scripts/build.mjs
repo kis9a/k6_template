@@ -2,7 +2,7 @@ import esbuild from "esbuild";
 import glob from "glob";
 
 // glob sync
-const entryPoints = glob.sync("./src/k6/**/*.ts");
+const entryPoints = glob.sync("./src/scenarios/**/*.ts");
 
 // arguments
 const args = process.argv.slice(2);
