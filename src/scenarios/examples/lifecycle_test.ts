@@ -28,8 +28,16 @@ console.log(
   "init code: Load local files, import modules, declare global variables"
 );
 
+interface Data {
+  setupString: string;
+}
+
 export function setup() {
   console.log("setup code: Set up data for processing, share data among VUs");
+  const data: Data = {
+    setupString: "finished setup",
+  };
+  return data;
 }
 
 export function teardown() {
@@ -38,7 +46,11 @@ export function teardown() {
   );
 }
 
-export default () => {
+export default (data: Data) => {
+  if (__VU == 1 && __ITER == 0) {
+    console.log(data.setupString);
+  }
+
   console.log(
     `SCENARIO: ${exec.scenario.name} :VU: ${__VU}  -  ITER: ${__ITER}`
   );
