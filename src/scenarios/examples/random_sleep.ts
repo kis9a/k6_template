@@ -22,7 +22,6 @@ export function setup() {
   );
   let ok = parsed[1];
 
-  // data.crocodiles =
   if (!ok) {
     fail("[ERROR]: can't bindJSON get crocodiles response");
   }

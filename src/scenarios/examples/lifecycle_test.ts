@@ -25,7 +25,7 @@ export let options: Options = {
 };
 
 console.log(
-  "init code: Load local files, import modules, declare global variables"
+  `VU: ${__VU}, init code: Load local files, import modules, declare global variables`
 );
 
 interface Data {
