@@ -4,8 +4,8 @@ import Example from "@/models/api/example";
 import envs from "@/envs";
 
 export let options: Options = {
-  vus: 1,
-  duration: "1s",
+  vus: 2,
+  duration: "10s",
 };
 
 export default () => {

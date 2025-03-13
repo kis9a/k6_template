@@ -1,1 +1,1 @@
-FROM loadimpact/k6:latest
+FROM grafana/k6:latest
